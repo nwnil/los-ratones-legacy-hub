@@ -1,6 +1,5 @@
 import { Hero } from "@/components/Hero";
 import { Roster } from "@/components/Roster";
-import { PlayerStats } from "@/components/PlayerStats";
 import { UpcomingMatches } from "@/components/UpcomingMatches";
 import { TeamNews } from "@/components/TeamNews";
 import { Achievements } from "@/components/Achievements";
@@ -20,7 +19,6 @@ const Index = () => {
     >
       <Hero />
       <Roster />
-      <PlayerStats />
       <UpcomingMatches />
       <Achievements />
       <TeamNews />
