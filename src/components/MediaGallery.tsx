@@ -49,8 +49,10 @@ const mediaItems: MediaItemType[] = [
   },
 ];
 
+type CategoryType = "all" | "photos" | "matches" | "clips";
+
 export const MediaGallery = () => {
-  const [selectedCategory, setSelectedCategory] = useState<"all" | "photos" | "matches" | "clips">("all");
+  const [selectedCategory, setSelectedCategory] = useState<CategoryType>("all");
 
   const filteredItems = selectedCategory === "all" 
     ? mediaItems 
