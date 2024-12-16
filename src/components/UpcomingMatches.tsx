@@ -46,7 +46,7 @@ const previousMatches = [
 
 export const UpcomingMatches = () => {
   return (
-    <section className="py-32 bg-rat-dark relative overflow-hidden">
+    <section id="matches" className="py-32 bg-rat-dark relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

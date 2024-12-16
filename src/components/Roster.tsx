@@ -7,7 +7,7 @@ export const Roster = () => {
   const players = teamData.players;
 
   return (
-    <section className="py-32 bg-rat-dark relative overflow-hidden">
+    <section id="roster" className="py-32 bg-rat-dark relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

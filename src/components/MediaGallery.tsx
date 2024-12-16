@@ -56,7 +56,7 @@ export const MediaGallery = () => {
     : mediaItems.filter(item => item.category === selectedCategory);
 
   return (
-    <section className="py-32 bg-gradient-to-b from-rat-dark to-rat-light relative overflow-hidden">
+    <section id="media" className="py-32 bg-gradient-to-b from-rat-dark to-rat-light relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div

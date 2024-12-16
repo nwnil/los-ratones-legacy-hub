@@ -3,9 +3,16 @@ import { ArrowRight, Calendar, Trophy, Users, Video, Twitter } from "lucide-reac
 import { Link } from "react-router-dom";
 
 export const Hero = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-rat-dark overflow-hidden">
-      {/* Dynamic background with gradient and pattern */}
+      {/* Background pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-rat-dark via-rat-dark to-rat-light/5" />
         <div className="absolute inset-0" style={{
@@ -28,7 +35,7 @@ export const Hero = () => {
           className="group flex items-center gap-2 bg-rat-dark/80 hover:bg-rat border border-rat/20 rounded-full px-6 py-3 transition-all duration-300"
         >
           <Twitter className="w-5 h-5 text-rat group-hover:text-rat-dark transition-colors" />
-          <span className="text-white group-hover:text-rat-dark font-medium transition-colors">Follow us</span>
+          <span className="text-white group-hover:text-rat-dark font-medium transition-colors">Follow the Team</span>
         </a>
       </motion.div>
 
@@ -98,14 +105,14 @@ export const Hero = () => {
               className="grid grid-cols-2 gap-6 relative z-10"
             >
               {[
-                { icon: Users, label: "Team Roster", link: "#roster" },
-                { icon: Trophy, label: "Achievements", link: "#achievements" },
-                { icon: Calendar, label: "Upcoming Matches", link: "#matches" },
-                { icon: Video, label: "Recent Highlights", link: "#media" },
+                { icon: Users, label: "Team Roster", id: "roster" },
+                { icon: Trophy, label: "Achievements", id: "achievements" },
+                { icon: Calendar, label: "Upcoming Matches", id: "matches" },
+                { icon: Video, label: "Recent Highlights", id: "media" },
               ].map((item, index) => (
-                <Link
+                <button
                   key={item.label}
-                  to={item.link}
+                  onClick={() => scrollToSection(item.id)}
                   className="group relative overflow-hidden"
                 >
                   <motion.div
@@ -119,7 +126,7 @@ export const Hero = () => {
                       {item.label}
                     </h3>
                   </motion.div>
-                </Link>
+                </button>
               ))}
             </motion.div>
           </div>
