@@ -1,25 +1,14 @@
 import { motion } from "framer-motion";
-import { Trophy, Newspaper, ArrowRight } from "lucide-react";
+import { Newspaper } from "lucide-react";
 
 const achievements = [
   {
-    title: "Superliga 2024 Spring - Week 8",
-    description: "Match against Movistar Riders",
-    date: "March 24, 2024",
+    title: "Los Ratones: The Rat King's Gambit",
+    description: "Caedrel's new team is ready to take over the LEC",
+    date: "March 26, 2024",
     type: "news",
-  },
-  {
-    title: "Zwyroo's Performance",
-    description: "Outstanding play against Barça eSports",
-    date: "March 16, 2024",
-    type: "highlight",
-  },
-  {
-    title: "Team Announcement",
-    description: "Caedrel announces Los Ratones roster",
-    date: "October 15, 2023",
-    type: "news",
-  },
+    link: "https://substack.com/@rigas/p-152752289"
+  }
 ];
 
 export const TeamNews = () => {
@@ -64,21 +53,21 @@ export const TeamNews = () => {
             >
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  {item.type === "achievement" ? (
-                    <Trophy className="w-5 h-5 text-rat" />
-                  ) : (
-                    <Newspaper className="w-5 h-5 text-rat" />
-                  )}
+                  <Newspaper className="w-5 h-5 text-rat" />
                   <span className="text-white/60 text-sm">{item.date}</span>
                 </div>
                 <h3 className="text-xl font-heading font-bold text-rat mb-2">
                   {item.title}
                 </h3>
                 <p className="text-white/80 mb-4">{item.description}</p>
-                <button className="flex items-center gap-2 text-rat hover:text-white transition-colors">
-                  Read More
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+                <a 
+                  href={item.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block text-rat hover:text-white transition-colors"
+                >
+                  Read Article
+                </a>
               </div>
 
               {/* Hover effect */}
