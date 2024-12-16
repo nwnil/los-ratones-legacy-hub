@@ -7,9 +7,17 @@ type MediaItem = {
   thumbnail: string;
   title: string;
   category: "match" | "team" | "highlights";
+  videoUrl?: string;
 };
 
 const mediaItems: MediaItem[] = [
+  {
+    type: "video",
+    thumbnail: "https://img.youtube.com/vi/q0MVTV0fpO8/maxresdefault.jpg",
+    title: "Los Ratones vs T1 - Red Bull League of Its Own",
+    category: "match",
+    videoUrl: "https://www.youtube.com/watch?v=q0MVTV0fpO8"
+  },
   {
     type: "image",
     thumbnail: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
@@ -54,6 +62,12 @@ export const MediaGallery = () => {
   const filteredItems = selectedCategory === "all" 
     ? mediaItems 
     : mediaItems.filter(item => item.category === selectedCategory);
+
+  const handleVideoClick = (videoUrl?: string) => {
+    if (videoUrl) {
+      window.open(videoUrl, '_blank');
+    }
+  };
 
   return (
     <section id="media" className="py-32 bg-gradient-to-b from-rat-dark to-rat-light relative overflow-hidden">
@@ -122,6 +136,7 @@ export const MediaGallery = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               className="group relative aspect-video bg-rat-dark rounded-xl overflow-hidden cursor-pointer"
+              onClick={() => item.type === "video" && handleVideoClick(item.videoUrl)}
             >
               <img
                 src={item.thumbnail}
