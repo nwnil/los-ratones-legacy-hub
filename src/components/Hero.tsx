@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar, Trophy, Users, Video } from "lucide-react";
+import { ArrowRight, Calendar, Trophy, Users, Video, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Hero = () => {
@@ -8,17 +8,48 @@ export const Hero = () => {
       {/* Enhanced background with subtle gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-rat-dark via-rat-dark to-rat-light/5" />
       
+      {/* Social Media Links */}
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+        className="absolute top-4 right-4 z-20"
+      >
+        <a
+          href="https://x.com/LosRatoneslol"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-rat-light/10 hover:bg-rat/20 rounded-full px-4 py-2 transition-colors"
+        >
+          <Twitter className="w-5 h-5 text-rat" />
+          <span className="text-white">Follow us</span>
+        </a>
+      </motion.div>
+      
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-6xl mx-auto">
           {/* Main content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Main title and description */}
+            {/* Left side - Logo, Main title and description */}
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-left relative z-20" // Added z-20 to ensure text stays on top
+              className="text-left relative z-20"
             >
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="mb-8"
+              >
+                <img 
+                  src="https://i.ibb.co/1GtzxXb/Los-Ratones-lightmode.png" 
+                  alt="Los Ratones Logo" 
+                  className="w-48 h-auto"
+                />
+              </motion.div>
+
               <motion.h1 
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -53,7 +84,7 @@ export const Hero = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-2 gap-4 relative z-10" // Added z-10 to ensure proper stacking
+              className="grid grid-cols-2 gap-4 relative z-10"
             >
               {[
                 { icon: Users, label: "Team Roster", link: "#roster" },
