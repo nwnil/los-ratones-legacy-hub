@@ -1,0 +1,43 @@
+{
+  "players": [
+    {
+      "name": "Irrelevant",
+      "fullName": "Joel Miro Scharoll",
+      "role": "Top Laner",
+      "image": "https://example.com/player1.jpg",
+      "twitter": "https://twitter.com/Irrelevant_lol",
+      "twitch": "https://twitch.tv/irrelevantlol"
+    }
+  ],
+  "matches": [
+    {
+      "opponent": "GIANTX",
+      "date": "2024-03-23",
+      "time": "17:00",
+      "tournament": "Superliga 2024 Spring - Week 9"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Superliga 2024 Spring",
+      "description": "Currently competing",
+      "date": "March 2024"
+    }
+  ],
+  "news": [
+    {
+      "title": "Team Announcement",
+      "description": "Caedrel announces Los Ratones roster",
+      "date": "October 15, 2023",
+      "type": "news"
+    }
+  ],
+  "media": [
+    {
+      "type": "image",
+      "thumbnail": "https://example.com/image1.jpg",
+      "title": "Team Photo",
+      "category": "team"
+    }
+  ]
+}

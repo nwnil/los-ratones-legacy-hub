@@ -5,8 +5,12 @@ import { UpcomingMatches } from "@/components/UpcomingMatches";
 import { TeamNews } from "@/components/TeamNews";
 import { Achievements } from "@/components/Achievements";
 import { motion } from "framer-motion";
+import { loadTeamData } from "@/utils/dataLoader";
 
 const Index = () => {
+  // Load all team data at once
+  const teamData = loadTeamData();
+  
   return (
     <motion.div 
       initial={{ opacity: 0 }}
