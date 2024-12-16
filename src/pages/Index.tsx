@@ -4,6 +4,7 @@ import { UpcomingMatches } from "@/components/UpcomingMatches";
 import { TeamNews } from "@/components/TeamNews";
 import { MediaGallery } from "@/components/MediaGallery";
 import { PlayerStats } from "@/components/PlayerStats";
+import { TeamHistory } from "@/components/TeamHistory";
 
 const Index = () => {
   return (
@@ -11,6 +12,7 @@ const Index = () => {
       <Hero />
       <Roster />
       <PlayerStats />
+      <TeamHistory />
       <UpcomingMatches />
       <TeamNews />
       <MediaGallery />
