@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { MediaItem } from "./MediaItem";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { useState } from "react";
 
 type MatchItemType = {
   thumbnail: string;
@@ -11,13 +13,15 @@ const matches: MatchItemType[] = [
   {
     thumbnail: "https://img.youtube.com/vi/q0MVTV0fpO8/maxresdefault.jpg",
     title: "Los Ratones vs T1 - Red Bull League of Its Own",
-    videoUrl: "https://www.youtube.com/watch?v=q0MVTV0fpO8"
+    videoUrl: "q0MVTV0fpO8"
   }
 ];
 
 export const MediaGallery = () => {
-  const handleVideoClick = (videoUrl: string) => {
-    window.open(videoUrl, '_blank');
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+
+  const handleVideoClick = (videoId: string) => {
+    setSelectedVideo(videoId);
   };
 
   return (
@@ -67,6 +71,22 @@ export const MediaGallery = () => {
           ))}
         </div>
       </div>
+
+      <Dialog open={!!selectedVideo} onOpenChange={() => setSelectedVideo(null)}>
+        <DialogContent className="max-w-4xl p-0 bg-black">
+          <div className="aspect-video w-full">
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${selectedVideo}`}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
