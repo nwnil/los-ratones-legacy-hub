@@ -5,31 +5,11 @@ import { Link } from "react-router-dom";
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-rat-dark overflow-hidden">
-      {/* Enhanced grain effect */}
-      <div className="absolute inset-0 z-0 opacity-50"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-          filter: 'contrast(150%) brightness(50%)'
-        }}
-      />
-      
-      {/* Enhanced gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-rat-dark/90 to-rat-dark" />
+      {/* Enhanced background with subtle gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-rat-dark via-rat-dark to-rat-light/5" />
       
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-6xl mx-auto">
-          {/* Latest match banner */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mb-12 text-center"
-          >
-            <div className="inline-block bg-rat-light/10 backdrop-blur-md rounded-full px-6 py-2 text-rat border border-rat/20">
-              LATEST VICTORY VS G2 ESPORTS
-            </div>
-          </motion.div>
-
           {/* Main content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Main title and description */}
@@ -37,7 +17,7 @@ export const Hero = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-left"
+              className="text-left relative z-20" // Added z-20 to ensure text stays on top
             >
               <motion.h1 
                 initial={{ scale: 0.9, opacity: 0 }}
@@ -73,7 +53,7 @@ export const Hero = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-2 gap-4 relative z-10" // Added z-10 to ensure proper stacking
             >
               {[
                 { icon: Users, label: "Team Roster", link: "#roster" },
