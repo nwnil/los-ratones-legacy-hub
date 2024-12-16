@@ -1,5 +1,46 @@
 {
-  "players": [],
+  "players": [
+    {
+      "name": "Player 1",
+      "fullName": "Top Laner",
+      "role": "Top",
+      "image": "/placeholder.svg",
+      "twitter": "https://twitter.com",
+      "twitch": "https://twitch.tv"
+    },
+    {
+      "name": "Player 2",
+      "fullName": "Jungler",
+      "role": "Jungle",
+      "image": "/placeholder.svg",
+      "twitter": "https://twitter.com",
+      "twitch": "https://twitch.tv"
+    },
+    {
+      "name": "Player 3",
+      "fullName": "Mid Laner",
+      "role": "Mid",
+      "image": "/placeholder.svg",
+      "twitter": "https://twitter.com",
+      "twitch": "https://twitch.tv"
+    },
+    {
+      "name": "Player 4",
+      "fullName": "Bot Laner",
+      "role": "Bot",
+      "image": "/placeholder.svg",
+      "twitter": "https://twitter.com",
+      "twitch": "https://twitch.tv"
+    },
+    {
+      "name": "Player 5",
+      "fullName": "Support",
+      "role": "Support",
+      "image": "/placeholder.svg",
+      "twitter": "https://twitter.com",
+      "twitch": "https://twitch.tv"
+    }
+  ],
   "matches": [
     {
       "opponent": "GIANTX",
