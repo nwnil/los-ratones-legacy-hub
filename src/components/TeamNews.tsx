@@ -3,11 +3,11 @@ import { Newspaper } from "lucide-react";
 
 const achievements = [
   {
-    title: "Los Ratones: The Rat King's Gambit",
+    title: "Los Ratones: Caedrel vs 5 Pigs, 1 Team",
     description: "Caedrel's new team is ready to take over the LEC",
     date: "March 26, 2024",
     type: "news",
-    link: "https://substack.com/@rigas/p-152752289"
+    link: "https://open.substack.com/pub/rigas/p/los-ratones-caedrel-vs-5-pigs-1-team?utm_campaign=post&utm_medium=web"
   }
 ];
 
