@@ -112,13 +112,13 @@ export const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 + index * 0.1 }}
-                    className="relative bg-gradient-to-br from-rat-light/10 to-rat-dark/80 backdrop-blur-md border border-rat/10 rounded-xl p-6 hover:border-rat/30 transition-all duration-300"
+                    className="relative bg-rat-dark/80 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300"
                   >
-                    <item.icon className="w-8 h-8 text-rat mb-4" />
+                    <item.icon className="w-8 h-8 text-white mb-4" />
                     <h3 className="text-white font-heading font-semibold">
                       {item.label}
                     </h3>
-                    <div className="absolute inset-0 bg-gradient-to-r from-rat/0 via-rat/10 to-rat/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </motion.div>
                 </Link>
               ))}
