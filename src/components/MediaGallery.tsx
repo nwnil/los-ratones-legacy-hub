@@ -11,9 +11,9 @@ type MatchItemType = {
 
 const matches: MatchItemType[] = [
   {
-    thumbnail: "https://img.youtube.com/vi/q0MVTV0fpO8/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/lF8oiHl6fgo/maxresdefault.jpg",
     title: "Los Ratones vs T1 - Red Bull League of Its Own",
-    videoUrl: "q0MVTV0fpO8"
+    videoUrl: "lF8oiHl6fgo"
   }
 ];
 
