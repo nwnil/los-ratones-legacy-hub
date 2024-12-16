@@ -13,7 +13,7 @@ const achievements = [
 
 export const TeamNews = () => {
   return (
-    <section className="py-32 bg-gradient-to-b from-rat-dark to-rat-light relative overflow-hidden">
+    <section id="news" className="py-32 bg-gradient-to-b from-rat-dark to-rat-light relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div

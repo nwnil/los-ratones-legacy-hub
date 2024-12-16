@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar, Trophy, Users, Video, Twitter } from "lucide-react";
+import { ArrowRight, Calendar, Trophy, Users, Video, Twitter, Newspaper } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Hero = () => {
@@ -108,7 +108,7 @@ export const Hero = () => {
                 { icon: Users, label: "Team Roster", id: "roster" },
                 { icon: Trophy, label: "Achievements", id: "achievements" },
                 { icon: Calendar, label: "Upcoming Matches", id: "matches" },
-                { icon: Video, label: "Recent Highlights", id: "media" },
+                { icon: Newspaper, label: "Team News", id: "news" },
               ].map((item, index) => (
                 <button
                   key={item.label}
@@ -119,10 +119,10 @@ export const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 + index * 0.1 }}
-                    className="relative bg-rat-dark/80 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:border-rat hover:bg-rat-dark transition-all duration-300"
+                    className="relative bg-rat-dark/80 backdrop-blur-md border border-white/10 rounded-xl p-8 hover:border-rat hover:bg-rat-dark transition-all duration-300 flex flex-col items-center gap-4"
                   >
-                    <item.icon className="w-8 h-8 text-white group-hover:text-rat transition-colors" />
-                    <h3 className="text-white font-heading font-semibold group-hover:text-rat transition-colors">
+                    <item.icon className="w-8 h-8 text-white group-hover:text-rat mb-2 transition-colors" />
+                    <h3 className="text-white font-heading font-semibold text-center group-hover:text-rat transition-colors">
                       {item.label}
                     </h3>
                   </motion.div>
