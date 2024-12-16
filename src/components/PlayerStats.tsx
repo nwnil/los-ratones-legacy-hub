@@ -1,61 +1,52 @@
 import { motion } from "framer-motion";
-import { Trophy, Star, Award, ChartBar } from "lucide-react";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer
-} from "recharts";
+import { Trophy, Gamepad2, Sword, Target } from "lucide-react";
 
 const stats = [
+  {
+    player: "113",
+    role: "Top Laner",
+    kda: "3.8",
+    mainChampions: ["Jax", "K'Sante", "Aatrox"],
+    highlight: "Best Top Gap 2024",
+    winRate: 65
+  },
+  {
+    player: "Lucker",
+    role: "Jungler",
+    kda: "4.5",
+    mainChampions: ["Lee Sin", "Graves", "Viego"],
+    highlight: "Most First Bloods 2024",
+    winRate: 62
+  },
   {
     player: "LIDER",
     role: "Mid Laner",
     kda: "4.2",
-    winRate: 68,
-    achievements: ["LEC Rookie of the Split", "5 Pentakills"],
-    signature: ["Yasuo", "Zed", "Akali"],
-    performance: [
-      { name: "KDA", value: 4.2 },
-      { name: "CS/min", value: 8.9 },
-      { name: "DMG%", value: 32.5 },
-    ]
+    mainChampions: ["Yasuo", "Zed", "Akali"],
+    highlight: "LEC Rookie of the Split",
+    winRate: 68
   },
   {
     player: "Patrik",
     role: "Bot Laner",
     kda: "5.1",
-    winRate: 71,
-    achievements: ["Most kills in a game", "MVP Week 3"],
-    signature: ["Kai'Sa", "Xayah", "Jinx"],
-    performance: [
-      { name: "KDA", value: 5.1 },
-      { name: "CS/min", value: 9.2 },
-      { name: "DMG%", value: 35.8 },
-    ]
+    mainChampions: ["Kai'Sa", "Xayah", "Jinx"],
+    highlight: "Most kills in a game",
+    winRate: 71
   },
   {
-    player: "113",
-    role: "Top Laner",
-    kda: "3.8",
-    winRate: 65,
-    achievements: ["Best Top Gap 2024", "Solo Bolo King"],
-    signature: ["Jax", "K'Sante", "Aatrox"],
-    performance: [
-      { name: "KDA", value: 3.8 },
-      { name: "CS/min", value: 8.5 },
-      { name: "DMG%", value: 28.4 },
-    ]
+    player: "Doss",
+    role: "Support",
+    kda: "3.9",
+    mainChampions: ["Thresh", "Nautilus", "Leona"],
+    highlight: "Best Vision Score 2024",
+    winRate: 64
   }
 ];
 
 export const PlayerStats = () => {
   return (
     <section className="py-32 bg-gradient-to-b from-rat-dark to-rat-light relative overflow-hidden">
-      {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
           className="absolute inset-0"
@@ -78,11 +69,11 @@ export const PlayerStats = () => {
             Player Statistics
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
-            Individual achievements and performance metrics of our star players
+            Meet our roster and their achievements
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {stats.map((player, index) => (
             <motion.div
               key={player.player}
@@ -90,94 +81,47 @@ export const PlayerStats = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative bg-gradient-to-b from-rat-light/50 to-rat-dark/50 rounded-xl p-6 backdrop-blur-sm border border-white/5 hover:border-rat/20 transition-all duration-300"
+              className="bg-gradient-to-b from-rat-light/50 to-rat-dark/50 rounded-xl p-6 backdrop-blur-sm border border-white/5 hover:border-rat/20 transition-all duration-300"
             >
               {/* Player name and role */}
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <h3 className="text-2xl font-heading font-bold text-rat">
-                    {player.player}
-                  </h3>
-                  <p className="text-white/60">{player.role}</p>
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-heading font-bold text-rat">
+                  {player.player}
+                </h3>
+                <p className="text-white/60">{player.role}</p>
+              </div>
+
+              {/* Main Stats */}
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center justify-between">
+                  <span className="text-white/60">Win Rate</span>
+                  <span className="text-rat font-bold">{player.winRate}%</span>
                 </div>
-                <Star className="w-8 h-8 text-rat opacity-50 group-hover:opacity-100 transition-opacity" />
+                <div className="flex items-center justify-between">
+                  <span className="text-white/60">KDA</span>
+                  <span className="text-rat font-bold">{player.kda}</span>
+                </div>
               </div>
 
-              {/* Performance Chart */}
-              <div className="mb-6 h-48">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={player.performance}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#ffffff10" />
-                    <XAxis dataKey="name" stroke="#ffffff60" />
-                    <YAxis stroke="#ffffff60" />
-                    <Tooltip
-                      contentStyle={{
-                        backgroundColor: "#1A1A1A",
-                        border: "1px solid #FFD700",
-                        borderRadius: "8px",
-                      }}
-                    />
-                    <Bar dataKey="value" fill="#FFD700" />
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-
-              {/* Win Rate Circle */}
-              <div className="relative w-24 h-24 mx-auto mb-6">
-                <svg className="w-full h-full" viewBox="0 0 36 36">
-                  <path
-                    d="M18 2.0845
-                      a 15.9155 15.9155 0 0 1 0 31.831
-                      a 15.9155 15.9155 0 0 1 0 -31.831"
-                    fill="none"
-                    stroke="#444"
-                    strokeWidth="3"
-                  />
-                  <path
-                    d="M18 2.0845
-                      a 15.9155 15.9155 0 0 1 0 31.831
-                      a 15.9155 15.9155 0 0 1 0 -31.831"
-                    fill="none"
-                    stroke="#FFD700"
-                    strokeWidth="3"
-                    strokeDasharray={`${player.winRate}, 100`}
-                  />
-                  <text x="18" y="20.35" className="text-5xl fill-white text-center">
-                    {player.winRate}%
-                  </text>
-                </svg>
-                <p className="text-center text-white/60 mt-2">Win Rate</p>
-              </div>
-
-              {/* Achievements */}
+              {/* Highlight Achievement */}
               <div className="mb-6">
-                <h4 className="flex items-center gap-2 text-white mb-3">
+                <div className="flex items-center gap-2 text-white mb-2">
                   <Trophy className="w-4 h-4 text-rat" />
-                  Achievements
-                </h4>
-                <ul className="space-y-2">
-                  {player.achievements.map((achievement, i) => (
-                    <li
-                      key={i}
-                      className="flex items-center gap-2 text-white/80"
-                    >
-                      <Award className="w-4 h-4 text-rat" />
-                      {achievement}
-                    </li>
-                  ))}
-                </ul>
+                  Achievement
+                </div>
+                <p className="text-white/80 text-sm">{player.highlight}</p>
               </div>
 
-              {/* Signature Champions */}
+              {/* Main Champions */}
               <div>
-                <h4 className="flex items-center gap-2 text-white mb-3">
-                  <ChartBar className="w-4 h-4 text-rat" />
-                  Signature Champions
-                </h4>
+                <div className="flex items-center gap-2 text-white mb-2">
+                  <Sword className="w-4 h-4 text-rat" />
+                  Main Champions
+                </div>
                 <div className="flex flex-wrap gap-2">
-                  {player.signature.map((champion, i) => (
+                  {player.mainChampions.map((champion) => (
                     <span
-                      key={i}
+                      key={champion}
                       className="bg-rat-dark/50 text-white/80 px-3 py-1 rounded-full text-sm"
                     >
                       {champion}
@@ -185,9 +129,6 @@ export const PlayerStats = () => {
                   ))}
                 </div>
               </div>
-
-              {/* Hover border effect */}
-              <div className="absolute inset-0 border-2 border-rat opacity-0 group-hover:opacity-100 rounded-xl transition-opacity" />
             </motion.div>
           ))}
         </div>
