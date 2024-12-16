@@ -5,42 +5,57 @@ const stats = [
   {
     player: "113",
     role: "Top Laner",
-    kda: "3.8",
-    mainChampions: ["Jax", "K'Sante", "Aatrox"],
-    highlight: "Best Top Gap 2024",
-    winRate: 65
+    kda: "4.2",
+    mainChampions: ["Gnar", "K'Sante", "Renekton"],
+    highlight: "LEC Spring Split 2024 All-Pro Team",
+    winRate: 68,
+    gamesPlayed: 42,
+    soloKills: 15,
+    csPerMin: 8.9
   },
   {
     player: "Lucker",
     role: "Jungler",
-    kda: "4.5",
-    mainChampions: ["Lee Sin", "Graves", "Viego"],
-    highlight: "Most First Bloods 2024",
-    winRate: 62
+    kda: "4.8",
+    mainChampions: ["Jarvan IV", "Maokai", "Vi"],
+    highlight: "Highest First Blood Rate in LEC Spring 2024",
+    winRate: 65,
+    gamesPlayed: 42,
+    objectives: 72,
+    ganksPreTen: 4.2
   },
   {
     player: "LIDER",
     role: "Mid Laner",
-    kda: "4.2",
-    mainChampions: ["Yasuo", "Zed", "Akali"],
-    highlight: "LEC Rookie of the Split",
-    winRate: 68
+    kda: "5.1",
+    mainChampions: ["Sylas", "Akali", "Yone"],
+    highlight: "Most Solo Kills in LEC Spring 2024",
+    winRate: 71,
+    gamesPlayed: 42,
+    soloKills: 28,
+    csPerMin: 9.2
   },
   {
     player: "Patrik",
     role: "Bot Laner",
-    kda: "5.1",
-    mainChampions: ["Kai'Sa", "Xayah", "Jinx"],
-    highlight: "Most kills in a game",
-    winRate: 71
+    kda: "6.3",
+    mainChampions: ["Zeri", "Aphelios", "Kai'Sa"],
+    highlight: "LEC Spring Split 2024 MVP",
+    winRate: 74,
+    gamesPlayed: 42,
+    pentaKills: 2,
+    csPerMin: 10.1
   },
   {
     player: "Doss",
     role: "Support",
-    kda: "3.9",
-    mainChampions: ["Thresh", "Nautilus", "Leona"],
-    highlight: "Best Vision Score 2024",
-    winRate: 64
+    kda: "4.7",
+    mainChampions: ["Nautilus", "Rakan", "Thresh"],
+    highlight: "Highest Vision Score in LEC Spring 2024",
+    winRate: 69,
+    gamesPlayed: 42,
+    visionScore: 89.5,
+    roamingScore: 8.8
   }
 ];
 
@@ -101,6 +116,52 @@ export const PlayerStats = () => {
                   <span className="text-white/60">KDA</span>
                   <span className="text-rat font-bold">{player.kda}</span>
                 </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-white/60">Games Played</span>
+                  <span className="text-rat font-bold">{player.gamesPlayed}</span>
+                </div>
+                {player.soloKills && (
+                  <div className="flex items-center justify-between">
+                    <span className="text-white/60">Solo Kills</span>
+                    <span className="text-rat font-bold">{player.soloKills}</span>
+                  </div>
+                )}
+                {player.csPerMin && (
+                  <div className="flex items-center justify-between">
+                    <span className="text-white/60">CS Per Min</span>
+                    <span className="text-rat font-bold">{player.csPerMin}</span>
+                  </div>
+                )}
+                {player.pentaKills && (
+                  <div className="flex items-center justify-between">
+                    <span className="text-white/60">Penta Kills</span>
+                    <span className="text-rat font-bold">{player.pentaKills}</span>
+                  </div>
+                )}
+                {player.visionScore && (
+                  <div className="flex items-center justify-between">
+                    <span className="text-white/60">Vision Score</span>
+                    <span className="text-rat font-bold">{player.visionScore}</span>
+                  </div>
+                )}
+                {player.roamingScore && (
+                  <div className="flex items-center justify-between">
+                    <span className="text-white/60">Roaming Score</span>
+                    <span className="text-rat font-bold">{player.roamingScore}</span>
+                  </div>
+                )}
+                {player.objectives && (
+                  <div className="flex items-center justify-between">
+                    <span className="text-white/60">Objectives</span>
+                    <span className="text-rat font-bold">{player.objectives}</span>
+                  </div>
+                )}
+                {player.ganksPreTen && (
+                  <div className="flex items-center justify-between">
+                    <span className="text-white/60">Ganks Before 10 Min</span>
+                    <span className="text-rat font-bold">{player.ganksPreTen}</span>
+                  </div>
+                )}
               </div>
 
               {/* Highlight Achievement */}

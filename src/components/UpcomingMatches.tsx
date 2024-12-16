@@ -3,19 +3,32 @@ import { motion } from "framer-motion";
 
 const matches = [
   {
-    opponent: "Team BDS",
-    date: "March 9, 2024",
+    opponent: "G2 Esports",
+    date: "March 23, 2024",
     time: "18:00 CET",
-    tournament: "LEC Spring 2024",
-    opponentLogo: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+    tournament: "LEC Spring 2024 - Week 8",
+    opponentLogo: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&auto=format&fit=crop",
+    venue: "LEC Studio, Berlin",
+    ticketLink: "https://lolesports.com/schedule"
   },
   {
-    opponent: "SK Gaming",
-    date: "March 10, 2024",
-    time: "19:00 CET",
-    tournament: "LEC Spring 2024",
-    opponentLogo: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+    opponent: "Fnatic",
+    date: "March 24, 2024",
+    time: "21:00 CET",
+    tournament: "LEC Spring 2024 - Week 8",
+    opponentLogo: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop",
+    venue: "LEC Studio, Berlin",
+    ticketLink: "https://lolesports.com/schedule"
   },
+  {
+    opponent: "MAD Lions",
+    date: "March 30, 2024",
+    time: "17:00 CET",
+    tournament: "LEC Spring 2024 - Week 9",
+    opponentLogo: "https://images.unsplash.com/photo-1560807707-8cc77767d783?w=800&auto=format&fit=crop",
+    venue: "LEC Studio, Berlin",
+    ticketLink: "https://lolesports.com/schedule"
+  }
 ];
 
 export const UpcomingMatches = () => {
