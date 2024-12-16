@@ -50,7 +50,7 @@ export const Hero = () => {
               >
                 <div className="absolute -inset-1 bg-gradient-to-r from-rat via-rat/50 to-transparent blur-xl opacity-30" />
                 <img 
-                  src="https://i.ibb.co/1GtzxXb/Los-Ratones-lightmode.png" 
+                  src="https://i.ibb.co/XVvZjrz/Los-Ratoneslogo-square.webp" 
                   alt="Los Ratones Logo" 
                   className="w-56 h-auto relative"
                 />
