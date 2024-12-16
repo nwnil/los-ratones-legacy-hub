@@ -4,21 +4,21 @@ import { Trophy, Calendar, Users, History } from "lucide-react";
 const milestones = [
   {
     year: "2023",
-    title: "LEC Entry",
-    description: "Los Ratones enters the LEC, marking a new chapter in competitive League of Legends.",
-    icon: Trophy,
-  },
-  {
-    year: "2022",
-    title: "European Masters Champions",
-    description: "Dominated the EU Masters tournament, showcasing our potential on the big stage.",
-    icon: Trophy,
-  },
-  {
-    year: "2021",
     title: "Team Formation",
-    description: "Los Ratones was founded with a vision to revolutionize European League of Legends.",
+    description: "Los Ratones was founded by Caedrel with a vision to compete in the Spanish Superliga.",
     icon: Users,
+  },
+  {
+    year: "2023",
+    title: "Superliga Debut",
+    description: "The team made its competitive debut in the Spanish Superliga.",
+    icon: Trophy,
+  },
+  {
+    year: "2024",
+    title: "Spring Split",
+    description: "Competing in Superliga 2024 Spring Split with a strong roster.",
+    icon: Trophy,
   },
 ];
 

@@ -3,59 +3,59 @@ import { Trophy, Gamepad2, Sword, Target } from "lucide-react";
 
 const stats = [
   {
-    player: "113",
+    player: "Irrelevant",
     role: "Top Laner",
-    kda: "4.2",
-    mainChampions: ["Gnar", "K'Sante", "Renekton"],
-    highlight: "LEC Spring Split 2024 All-Pro Team",
-    winRate: 68,
-    gamesPlayed: 42,
-    soloKills: 15,
-    csPerMin: 8.9
-  },
-  {
-    player: "Lucker",
-    role: "Jungler",
-    kda: "4.8",
-    mainChampions: ["Jarvan IV", "Maokai", "Vi"],
-    highlight: "Highest First Blood Rate in LEC Spring 2024",
+    kda: "3.8",
+    mainChampions: ["K'Sante", "Gnar", "Renekton"],
+    highlight: "Former LEC player with Team Vitality",
     winRate: 65,
-    gamesPlayed: 42,
-    objectives: 72,
-    ganksPreTen: 4.2
+    gamesPlayed: 38,
+    soloKills: 12,
+    csPerMin: 8.5
   },
   {
-    player: "LIDER",
+    player: "Shlatan",
+    role: "Jungler",
+    kda: "4.2",
+    mainChampions: ["Vi", "Maokai", "Sejuani"],
+    highlight: "Former LEC player with Misfits Gaming",
+    winRate: 62,
+    gamesPlayed: 38,
+    objectives: 68,
+    ganksPreTen: 4.0
+  },
+  {
+    player: "Zwyroo",
     role: "Mid Laner",
-    kda: "5.1",
-    mainChampions: ["Sylas", "Akali", "Yone"],
-    highlight: "Most Solo Kills in LEC Spring 2024",
-    winRate: 71,
-    gamesPlayed: 42,
-    soloKills: 28,
-    csPerMin: 9.2
+    kda: "4.5",
+    mainChampions: ["Azir", "Orianna", "Syndra"],
+    highlight: "Rising star from Polish scene",
+    winRate: 65,
+    gamesPlayed: 38,
+    soloKills: 15,
+    csPerMin: 9.1
   },
   {
-    player: "Patrik",
+    player: "Keduii",
     role: "Bot Laner",
-    kda: "6.3",
-    mainChampions: ["Zeri", "Aphelios", "Kai'Sa"],
-    highlight: "LEC Spring Split 2024 MVP",
-    winRate: 74,
-    gamesPlayed: 42,
-    pentaKills: 2,
-    csPerMin: 10.1
+    kda: "5.1",
+    mainChampions: ["Zeri", "Xayah", "Kai'Sa"],
+    highlight: "Known for aggressive playstyle",
+    winRate: 68,
+    gamesPlayed: 38,
+    pentaKills: 1,
+    csPerMin: 9.8
   },
   {
-    player: "Doss",
+    player: "Stend",
     role: "Support",
-    kda: "4.7",
-    mainChampions: ["Nautilus", "Rakan", "Thresh"],
-    highlight: "Highest Vision Score in LEC Spring 2024",
-    winRate: 69,
-    gamesPlayed: 42,
-    visionScore: 89.5,
-    roamingScore: 8.8
+    kda: "4.3",
+    mainChampions: ["Nautilus", "Thresh", "Rakan"],
+    highlight: "Former ERL veteran",
+    winRate: 65,
+    gamesPlayed: 38,
+    visionScore: 85.5,
+    roamingScore: 8.5
   }
 ];
 
