@@ -1,6 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { Roster } from "@/components/Roster";
 import { UpcomingMatches } from "@/components/UpcomingMatches";
+import { TeamNews } from "@/components/TeamNews";
 
 const Index = () => {
   return (
@@ -8,6 +9,7 @@ const Index = () => {
       <Hero />
       <Roster />
       <UpcomingMatches />
+      <TeamNews />
     </div>
   );
 };
