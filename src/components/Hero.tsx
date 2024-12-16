@@ -50,18 +50,18 @@ export const Hero = () => {
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className="relative group"
               >
-                {/* Subtle border glow effect */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-white/10 to-white/5 rounded-xl blur-sm opacity-50 group-hover:opacity-75 transition duration-500" />
+                {/* Animated glow effect */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-rat to-rat/50 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse" />
                 
-                {/* Logo container with elegant shadow */}
-                <div className="relative bg-rat-dark/50 rounded-xl p-1">
+                {/* Logo container with reflection effect */}
+                <div className="relative">
                   <img 
                     src="https://i.ibb.co/XVvZjrz/Los-Ratoneslogo-square.webp" 
                     alt="Los Ratones Logo" 
-                    className="w-48 h-48 object-cover rounded-lg shadow-xl transform transition-all duration-500 group-hover:brightness-110"
+                    className="w-48 h-48 object-cover rounded-xl shadow-2xl transform transition-transform duration-500"
                   />
-                  {/* Subtle bottom highlight */}
-                  <div className="absolute -bottom-4 left-0 right-0 h-4 bg-gradient-to-b from-white/10 to-transparent blur-sm" />
+                  {/* Reflection effect */}
+                  <div className="absolute -bottom-8 left-0 right-0 h-8 bg-gradient-to-b from-rat/30 to-transparent blur-sm transform scale-y-[-1] opacity-50" />
                 </div>
               </motion.div>
 
