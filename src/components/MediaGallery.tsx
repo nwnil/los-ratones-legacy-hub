@@ -1,7 +1,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MediaFilterButton } from "./MediaFilterButton";
-import { MediaItem, MediaItemType } from "./MediaItem";
+import { MediaItem } from "./MediaItem";
+
+type MediaItemType = {
+  type: "image" | "video";
+  thumbnail: string;
+  title: string;
+  category: "photos" | "matches" | "clips";
+  videoUrl?: string;
+};
 
 const mediaItems: MediaItemType[] = [
   {
@@ -49,14 +57,16 @@ const mediaItems: MediaItemType[] = [
   },
 ];
 
-type CategoryType = "all" | "photos" | "matches" | "clips";
-
 export const MediaGallery = () => {
-  const [selectedCategory, setSelectedCategory] = useState<CategoryType>("all");
+  const [activeCategory, setActiveCategory] = useState<"all" | "photos" | "matches" | "clips">("all");
 
-  const filteredItems = selectedCategory === "all" 
+  const handleCategoryChange = (category: typeof activeCategory) => {
+    setActiveCategory(category);
+  };
+
+  const filteredItems = activeCategory === "all" 
     ? mediaItems 
-    : mediaItems.filter(item => item.category === selectedCategory);
+    : mediaItems.filter(item => item.category === activeCategory);
 
   const handleVideoClick = (videoUrl?: string) => {
     if (videoUrl) {
@@ -96,26 +106,26 @@ export const MediaGallery = () => {
         {/* Filter buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <MediaFilterButton
-            active={selectedCategory === "all"}
-            onClick={() => setSelectedCategory("all")}
+            active={activeCategory === "all"}
+            onClick={() => handleCategoryChange("all")}
           >
             All Media
           </MediaFilterButton>
           <MediaFilterButton
-            active={selectedCategory === "photos"}
-            onClick={() => setSelectedCategory("photos")}
+            active={activeCategory === "photos"}
+            onClick={() => handleCategoryChange("photos")}
           >
             Photos
           </MediaFilterButton>
           <MediaFilterButton
-            active={selectedCategory === "matches"}
-            onClick={() => setSelectedCategory("matches")}
+            active={activeCategory === "matches"}
+            onClick={() => handleCategoryChange("matches")}
           >
             Matches
           </MediaFilterButton>
           <MediaFilterButton
-            active={selectedCategory === "clips"}
-            onClick={() => setSelectedCategory("clips")}
+            active={activeCategory === "clips"}
+            onClick={() => handleCategoryChange("clips")}
           >
             Clips
           </MediaFilterButton>
