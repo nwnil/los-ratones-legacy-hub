@@ -4,6 +4,7 @@ import { FounderCard } from "@/components/FounderCard";
 import { UpcomingMatches } from "@/components/UpcomingMatches";
 import { TeamNews } from "@/components/TeamNews";
 import { Achievements } from "@/components/Achievements";
+import { MediaGallery } from "@/components/MediaGallery";
 import { motion } from "framer-motion";
 import { loadTeamData } from "@/utils/dataLoader";
 
@@ -23,6 +24,7 @@ const Index = () => {
       <FounderCard />
       <UpcomingMatches />
       <Achievements />
+      <MediaGallery />
       <TeamNews />
     </motion.div>
   );
