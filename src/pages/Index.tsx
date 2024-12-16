@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { Roster } from "@/components/Roster";
+import { FounderCard } from "@/components/FounderCard";
 import { UpcomingMatches } from "@/components/UpcomingMatches";
 import { TeamNews } from "@/components/TeamNews";
 import { Achievements } from "@/components/Achievements";
@@ -19,6 +20,7 @@ const Index = () => {
     >
       <Hero />
       <Roster />
+      <FounderCard />
       <UpcomingMatches />
       <Achievements />
       <TeamNews />
