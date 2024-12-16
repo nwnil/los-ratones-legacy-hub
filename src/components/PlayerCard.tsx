@@ -3,12 +3,14 @@ import { Twitter, Twitch } from "lucide-react";
 
 interface PlayerCardProps {
   name: string;
+  fullName: string;
   role: string;
   image: string;
-  ign: string;
+  twitter?: string;
+  twitch?: string;
 }
 
-export const PlayerCard = ({ name, role, image, ign }: PlayerCardProps) => {
+export const PlayerCard = ({ name, fullName, role, image, twitter, twitch }: PlayerCardProps) => {
   return (
     <motion.div 
       whileHover={{ y: -10 }}
@@ -28,18 +30,22 @@ export const PlayerCard = ({ name, role, image, ign }: PlayerCardProps) => {
         
         {/* Social Media Icons */}
         <div className="absolute bottom-4 right-4 flex gap-2 transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-          <a href="#" className="p-2 bg-rat-dark/80 rounded-full hover:bg-rat text-white hover:text-rat-dark transition-colors">
-            <Twitter className="w-5 h-5" />
-          </a>
-          <a href="#" className="p-2 bg-rat-dark/80 rounded-full hover:bg-rat text-white hover:text-rat-dark transition-colors">
-            <Twitch className="w-5 h-5" />
-          </a>
+          {twitter && (
+            <a href={twitter} target="_blank" rel="noopener noreferrer" className="p-2 bg-rat-dark/80 rounded-full hover:bg-rat text-white hover:text-rat-dark transition-colors">
+              <Twitter className="w-5 h-5" />
+            </a>
+          )}
+          {twitch && (
+            <a href={twitch} target="_blank" rel="noopener noreferrer" className="p-2 bg-rat-dark/80 rounded-full hover:bg-rat text-white hover:text-rat-dark transition-colors">
+              <Twitch className="w-5 h-5" />
+            </a>
+          )}
         </div>
       </div>
       
       <div className="p-6">
-        <h3 className="text-rat text-2xl font-heading font-bold mb-1">{ign}</h3>
-        <p className="text-white text-lg mb-1">{name}</p>
+        <h3 className="text-rat text-2xl font-heading font-bold mb-1">{name}</h3>
+        <p className="text-white text-lg mb-1">{fullName}</p>
         <p className="text-gray-400 text-sm uppercase tracking-wider">{role}</p>
       </div>
 
