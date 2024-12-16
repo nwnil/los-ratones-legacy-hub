@@ -41,19 +41,14 @@
       "twitch": "https://www.twitch.tv/rekkles"
     }
   ],
-  "matches": [
-    {
-      "opponent": "GIANTX",
-      "date": "2024-03-23",
-      "time": "17:00",
-      "tournament": "Superliga 2024 Spring - Week 9"
-    }
-  ],
+  "matches": [],
   "achievements": [
     {
-      "title": "Superliga 2024 Spring",
-      "description": "Currently competing",
-      "date": "March 2024"
+      "title": "NNO Cup Season 2",
+      "description": "1st Place",
+      "date": "2024-12-08",
+      "tier": "C-Tier",
+      "prize": "$10,576"
     }
   ],
   "news": [
