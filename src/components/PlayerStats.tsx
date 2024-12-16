@@ -1,30 +1,54 @@
 import { motion } from "framer-motion";
 import { Trophy, Star, Award, ChartBar } from "lucide-react";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer
+} from "recharts";
 
 const stats = [
   {
     player: "LIDER",
     role: "Mid Laner",
     kda: "4.2",
-    winRate: "68%",
+    winRate: 68,
     achievements: ["LEC Rookie of the Split", "5 Pentakills"],
-    signature: ["Yasuo", "Zed", "Akali"]
+    signature: ["Yasuo", "Zed", "Akali"],
+    performance: [
+      { name: "KDA", value: 4.2 },
+      { name: "CS/min", value: 8.9 },
+      { name: "DMG%", value: 32.5 },
+    ]
   },
   {
     player: "Patrik",
     role: "Bot Laner",
     kda: "5.1",
-    winRate: "71%",
+    winRate: 71,
     achievements: ["Most kills in a game", "MVP Week 3"],
-    signature: ["Kai'Sa", "Xayah", "Jinx"]
+    signature: ["Kai'Sa", "Xayah", "Jinx"],
+    performance: [
+      { name: "KDA", value: 5.1 },
+      { name: "CS/min", value: 9.2 },
+      { name: "DMG%", value: 35.8 },
+    ]
   },
   {
     player: "113",
     role: "Top Laner",
     kda: "3.8",
-    winRate: "65%",
+    winRate: 65,
     achievements: ["Best Top Gap 2024", "Solo Bolo King"],
-    signature: ["Jax", "K'Sante", "Aatrox"]
+    signature: ["Jax", "K'Sante", "Aatrox"],
+    performance: [
+      { name: "KDA", value: 3.8 },
+      { name: "CS/min", value: 8.5 },
+      { name: "DMG%", value: 28.4 },
+    ]
   }
 ];
 
@@ -58,7 +82,7 @@ export const PlayerStats = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {stats.map((player, index) => (
             <motion.div
               key={player.player}
@@ -79,16 +103,50 @@ export const PlayerStats = () => {
                 <Star className="w-8 h-8 text-rat opacity-50 group-hover:opacity-100 transition-opacity" />
               </div>
 
-              {/* Stats */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-rat-dark/50 rounded-lg p-4">
-                  <p className="text-white/60 text-sm mb-1">KDA Ratio</p>
-                  <p className="text-2xl font-bold text-rat">{player.kda}</p>
-                </div>
-                <div className="bg-rat-dark/50 rounded-lg p-4">
-                  <p className="text-white/60 text-sm mb-1">Win Rate</p>
-                  <p className="text-2xl font-bold text-rat">{player.winRate}</p>
-                </div>
+              {/* Performance Chart */}
+              <div className="mb-6 h-48">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={player.performance}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#ffffff10" />
+                    <XAxis dataKey="name" stroke="#ffffff60" />
+                    <YAxis stroke="#ffffff60" />
+                    <Tooltip
+                      contentStyle={{
+                        backgroundColor: "#1A1A1A",
+                        border: "1px solid #FFD700",
+                        borderRadius: "8px",
+                      }}
+                    />
+                    <Bar dataKey="value" fill="#FFD700" />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+
+              {/* Win Rate Circle */}
+              <div className="relative w-24 h-24 mx-auto mb-6">
+                <svg className="w-full h-full" viewBox="0 0 36 36">
+                  <path
+                    d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                    fill="none"
+                    stroke="#444"
+                    strokeWidth="3"
+                  />
+                  <path
+                    d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                    fill="none"
+                    stroke="#FFD700"
+                    strokeWidth="3"
+                    strokeDasharray={`${player.winRate}, 100`}
+                  />
+                  <text x="18" y="20.35" className="text-5xl fill-white text-center">
+                    {player.winRate}%
+                  </text>
+                </svg>
+                <p className="text-center text-white/60 mt-2">Win Rate</p>
               </div>
 
               {/* Achievements */}
