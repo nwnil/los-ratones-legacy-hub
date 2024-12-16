@@ -3,28 +3,28 @@ import { Trophy, Star, Award, Medal } from "lucide-react";
 
 const achievements = [
   {
-    title: "LEC 2024 Spring Split",
-    description: "Qualified for playoffs in first split",
+    title: "Superliga 2024 Spring",
+    description: "Currently competing",
     icon: Trophy,
     date: "March 2024"
   },
   {
-    title: "EU Masters 2023",
-    description: "Top 4 finish",
+    title: "Iberian Cup 2023",
+    description: "Top 4",
     icon: Medal,
     date: "December 2023"
   },
   {
-    title: "Spanish Superliga",
-    description: "Champions",
+    title: "Spanish Regional League",
+    description: "Qualified",
     icon: Star,
-    date: "November 2023"
+    date: "October 2023"
   },
   {
-    title: "Rising Stars Tournament",
-    description: "Winners",
+    title: "Team Formation",
+    description: "Founded by Caedrel",
     icon: Award,
-    date: "September 2023"
+    date: "October 2023"
   }
 ];
 
@@ -42,7 +42,7 @@ export const Achievements = () => {
             Team Achievements
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
-            Our journey to the top
+            Our journey in competitive League of Legends
           </p>
         </motion.div>
 

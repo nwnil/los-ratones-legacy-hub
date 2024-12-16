@@ -3,21 +3,21 @@ import { Trophy, Newspaper, ArrowRight } from "lucide-react";
 
 const achievements = [
   {
-    title: "LEC 2024 Spring - Week 5",
-    description: "Victory against G2 Esports",
-    date: "February 17, 2024",
-    type: "achievement",
+    title: "Superliga 2024 Spring - Week 8",
+    description: "Match against Movistar Riders",
+    date: "March 24, 2024",
+    type: "news",
   },
   {
-    title: "LIDER's Pentakill",
-    description: "Amazing play against Team BDS",
-    date: "February 10, 2024",
+    title: "Zwyroo's Performance",
+    description: "Outstanding play against Barça eSports",
+    date: "March 16, 2024",
     type: "highlight",
   },
   {
-    title: "New Team Announcement",
-    description: "Los Ratones enters the LEC",
-    date: "December 15, 2023",
+    title: "Team Announcement",
+    description: "Caedrel announces Los Ratones roster",
+    date: "October 15, 2023",
     type: "news",
   },
 ];
