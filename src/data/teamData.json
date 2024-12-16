@@ -1,44 +1,44 @@
 {
   "players": [
     {
-      "name": "Player 1",
-      "fullName": "Top Laner",
+      "name": "Thebausffs",
+      "fullName": "Simon Hofverberg",
       "role": "Top",
       "image": "/placeholder.svg",
-      "twitter": "https://twitter.com",
-      "twitch": "https://twitch.tv"
+      "twitter": "https://x.com/thebausffs",
+      "twitch": "https://www.twitch.tv/thebausffs"
     },
     {
-      "name": "Player 2",
-      "fullName": "Jungler",
+      "name": "Velja",
+      "fullName": "Veljko Jovanović",
       "role": "Jungle",
       "image": "/placeholder.svg",
-      "twitter": "https://twitter.com",
-      "twitch": "https://twitch.tv"
+      "twitter": "https://x.com/Velja_LOL",
+      "twitch": "https://www.twitch.tv/velja_lol"
     },
     {
-      "name": "Player 3",
-      "fullName": "Mid Laner",
+      "name": "Nemesis",
+      "fullName": "Tim Lipovšek",
       "role": "Mid",
       "image": "/placeholder.svg",
-      "twitter": "https://twitter.com",
-      "twitch": "https://twitch.tv"
+      "twitter": "https://x.com/nemesis_lol",
+      "twitch": "https://www.twitch.tv/lol_nemesis"
     },
     {
-      "name": "Player 4",
-      "fullName": "Bot Laner",
+      "name": "Crownie",
+      "fullName": "Juš Marušič",
       "role": "Bot",
       "image": "/placeholder.svg",
-      "twitter": "https://twitter.com",
-      "twitch": "https://twitch.tv"
+      "twitter": "https://x.com/CrownshotLoL",
+      "twitch": "https://www.twitch.tv/crownsh0t"
     },
     {
-      "name": "Player 5",
-      "fullName": "Support",
+      "name": "Rekkles",
+      "fullName": "Carl Martin Erik Larsson",
       "role": "Support",
       "image": "/placeholder.svg",
-      "twitter": "https://twitter.com",
-      "twitch": "https://twitch.tv"
+      "twitter": "https://x.com/RekklesLoL",
+      "twitch": "https://www.twitch.tv/rekkles"
     }
   ],
   "matches": [
