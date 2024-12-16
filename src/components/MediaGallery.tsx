@@ -96,19 +96,19 @@ export const MediaGallery = () => {
             active={selectedCategory === "team"}
             onClick={() => setSelectedCategory("team")}
           >
-            Team Photos
+            Photos
           </FilterButton>
           <FilterButton
             active={selectedCategory === "match"}
             onClick={() => setSelectedCategory("match")}
           >
-            Match Photos
+            Matches
           </FilterButton>
           <FilterButton
             active={selectedCategory === "highlights"}
             onClick={() => setSelectedCategory("highlights")}
           >
-            Highlights
+            Clips
           </FilterButton>
         </div>
 
