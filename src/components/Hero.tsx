@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar, Trophy, Users, Video, Twitter, Newspaper } from "lucide-react";
+import { ArrowRight, Calendar, Trophy, Users, Twitter, Newspaper, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Hero = () => {
@@ -8,6 +8,10 @@ export const Hero = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const openLatestMatch = () => {
+    window.open('https://www.youtube.com/watch?v=q0MVTV0fpO8', '_blank');
   };
 
   return (
@@ -89,15 +93,16 @@ export const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={openLatestMatch}
                 className="group relative overflow-hidden bg-rat hover:bg-rat/90 text-rat-dark font-bold py-4 px-8 rounded-lg flex items-center gap-2 transition-colors"
               >
-                <span className="relative z-10">Watch Latest Matches</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
+                <Youtube className="w-5 h-5 relative z-10" />
+                <span className="relative z-10">Watch Latest Match</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500" />
               </motion.button>
             </motion.div>
 
-            {/* Right side - Quick links with dark background */}
+            {/* Right side - Quick links */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
