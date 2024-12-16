@@ -42,18 +42,27 @@ export const Hero = () => {
               transition={{ duration: 0.8 }}
               className="text-left relative z-20 space-y-8"
             >
+              {/* Enhanced Logo Container */}
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1, ease: "easeOut" }}
-                className="relative"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="relative group"
               >
-                <div className="absolute -inset-1 bg-gradient-to-r from-rat via-rat/50 to-transparent blur-xl opacity-30" />
-                <img 
-                  src="https://i.ibb.co/XVvZjrz/Los-Ratoneslogo-square.webp" 
-                  alt="Los Ratones Logo" 
-                  className="w-56 h-auto relative"
-                />
+                {/* Animated glow effect */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-rat to-rat/50 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse" />
+                
+                {/* Logo container with reflection effect */}
+                <div className="relative">
+                  <img 
+                    src="https://i.ibb.co/XVvZjrz/Los-Ratoneslogo-square.webp" 
+                    alt="Los Ratones Logo" 
+                    className="w-48 h-48 object-cover rounded-xl shadow-2xl transform transition-transform duration-500"
+                  />
+                  {/* Reflection effect */}
+                  <div className="absolute -bottom-8 left-0 right-0 h-8 bg-gradient-to-b from-rat/30 to-transparent blur-sm transform scale-y-[-1] opacity-50" />
+                </div>
               </motion.div>
 
               <motion.div
@@ -81,7 +90,7 @@ export const Hero = () => {
               </motion.button>
             </motion.div>
 
-            {/* Right side - Quick links with enhanced design */}
+            {/* Right side - Quick links */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
