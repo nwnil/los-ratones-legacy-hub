@@ -50,7 +50,7 @@ export const Hero = () => {
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className="relative group"
               >
-                {/* Animated glow effect */}
+                {/* Animated glow effect - only behind the logo */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-rat to-rat/50 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse" />
                 
                 {/* Logo container with reflection effect */}
@@ -90,7 +90,7 @@ export const Hero = () => {
               </motion.button>
             </motion.div>
 
-            {/* Right side - Quick links */}
+            {/* Right side - Quick links with dark background */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
