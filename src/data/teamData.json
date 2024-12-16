@@ -1,14 +1,5 @@
 {
-  "players": [
-    {
-      "name": "Baus",
-      "fullName": "Joel Miro Scharoll",
-      "role": "Top Laner",
-      "image": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/5/5e/LEC_Thebausffs_2021.png",
-      "twitter": "https://x.com/thebausffs",
-      "twitch": "https://www.twitch.tv/thebausffs"
-    }
-  ],
+  "players": [],
   "matches": [
     {
       "opponent": "GIANTX",
