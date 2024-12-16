@@ -10,10 +10,6 @@ export const Hero = () => {
     }
   };
 
-  const openLatestMatch = () => {
-    window.open('https://www.youtube.com/watch?v=q0MVTV0fpO8', '_blank');
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-rat-dark overflow-hidden">
       {/* Background pattern */}
@@ -93,7 +89,7 @@ export const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={openLatestMatch}
+                onClick={() => scrollToSection('media')}
                 className="group relative overflow-hidden bg-rat hover:bg-rat/90 text-rat-dark font-bold py-4 px-8 rounded-lg flex items-center gap-2 transition-colors"
               >
                 <Youtube className="w-5 h-5 relative z-10" />
