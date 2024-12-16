@@ -36,9 +36,6 @@ export const TeamNews = () => {
           <h2 className="text-5xl font-heading font-bold text-rat mb-4">
             Latest News & Achievements
           </h2>
-          <p className="text-white/60 max-w-2xl mx-auto">
-            Stay updated with Los Ratones' journey through the LEC
-          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
