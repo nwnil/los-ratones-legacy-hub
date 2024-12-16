@@ -48,7 +48,7 @@ export const Hero = () => {
                 animate={{ scale: 1, opacity: 1 }}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="relative group"
+                className="relative group w-48"
               >
                 {/* Animated glow effect - only behind the logo */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-rat to-rat/50 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse" />

@@ -7,12 +7,13 @@ export const Roster = () => {
   const players = teamData.players;
 
   return (
-    <section className="py-32 bg-rat-dark relative overflow-hidden">
+    <section className="py-32 bg-gradient-to-b from-rat-dark to-rat-light relative overflow-hidden">
       {/* Decorative background elements */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-rat/20 to-transparent" />
         <div className="absolute inset-0" style={{
-          backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
-          backgroundSize: "40px 40px",
+          backgroundImage: "radial-gradient(circle at 2px 2px, rgba(255,215,0,0.1) 1px, transparent 0)",
+          backgroundSize: "40px 40px"
         }} />
       </div>
 
