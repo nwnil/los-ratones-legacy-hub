@@ -5,6 +5,7 @@ import { UpcomingMatches } from "@/components/UpcomingMatches";
 import { TeamNews } from "@/components/TeamNews";
 import { Achievements } from "@/components/Achievements";
 import { MediaGallery } from "@/components/MediaGallery";
+import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { loadTeamData } from "@/utils/dataLoader";
 
@@ -26,6 +27,7 @@ const Index = () => {
       <Achievements />
       <MediaGallery />
       <TeamNews />
+      <Footer />
     </motion.div>
   );
 };

@@ -53,7 +53,7 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         rat: {
-          DEFAULT: "#FFD700",
+          DEFAULT: "#10B981", // Changed from yellow to emerald-500
           dark: "#1A1A1A",
           light: "#2D2D2D",
         },

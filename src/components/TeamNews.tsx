@@ -5,7 +5,7 @@ const achievements = [
   {
     title: "Los Ratones: Caedrel vs 5 Pigs, 1 Team",
     description: "Caedrel's new team is ready to take over the LEC",
-    date: "March 26, 2024",
+    date: "March 15, 2024",
     type: "news",
     link: "https://open.substack.com/pub/rigas/p/los-ratones-caedrel-vs-5-pigs-1-team?utm_campaign=post&utm_medium=web"
   }
@@ -33,43 +33,41 @@ export const TeamNews = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-heading font-bold text-rat mb-4">
+          <h2 className="text-5xl font-heading font-bold text-emerald-500 mb-4">
             Latest News & Achievements
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {achievements.map((item, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative bg-gradient-to-b from-rat-light to-rat-dark rounded-xl overflow-hidden border border-white/5 hover:border-rat/20 transition-all duration-300"
+              className="group relative bg-gradient-to-b from-rat-light to-rat-dark rounded-xl overflow-hidden border border-white/5 hover:border-emerald-500/20 transition-all duration-300"
             >
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <Newspaper className="w-5 h-5 text-rat" />
+                  <Newspaper className="w-5 h-5 text-emerald-500" />
                   <span className="text-white/60 text-sm">{item.date}</span>
                 </div>
-                <h3 className="text-xl font-heading font-bold text-rat mb-2">
+                <h3 className="text-xl font-heading font-bold text-emerald-500 mb-2">
                   {item.title}
                 </h3>
                 <p className="text-white/80 mb-4">{item.description}</p>
-                <a 
-                  href={item.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-block text-rat hover:text-white transition-colors"
-                >
+                <span className="inline-block text-emerald-500 hover:text-white transition-colors">
                   Read Article
-                </a>
+                </span>
               </div>
 
               {/* Hover effect */}
-              <div className="absolute inset-0 border-2 border-rat opacity-0 group-hover:opacity-100 rounded-xl transition-opacity" />
-            </motion.div>
+              <div className="absolute inset-0 border-2 border-emerald-500 opacity-0 group-hover:opacity-100 rounded-xl transition-opacity" />
+            </motion.a>
           ))}
         </div>
       </div>
