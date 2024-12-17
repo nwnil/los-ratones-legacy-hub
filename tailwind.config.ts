@@ -53,9 +53,10 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         rat: {
-          DEFAULT: "#10B981", // Changed from yellow to emerald-500
+          DEFAULT: "#059669", // Changed to emerald-600 for better visibility
           dark: "#1A1A1A",
           light: "#2D2D2D",
+          accent: "#34d399", // Added emerald-400 as accent for hover states
         },
       },
       fontFamily: {
