@@ -78,9 +78,9 @@ export const UpcomingMatches = () => {
         >
           <div className="bg-gradient-to-r from-rat-dark/80 to-rat-dark/60 backdrop-blur-lg p-8 rounded-2xl border border-white/5">
             <div className="overflow-x-auto">
-              <table className="w-full">
+              <table className="w-full border-separate border-spacing-0">
                 <thead>
-                  <tr className="border-b border-white/10">
+                  <tr>
                     <th className="text-left py-4 px-4 text-white/60 font-medium">Date</th>
                     <th className="text-left py-4 px-4 text-white/60 font-medium">Event</th>
                     <th className="text-left py-4 px-4 text-white/60 font-medium">Round</th>
@@ -91,7 +91,7 @@ export const UpcomingMatches = () => {
                 </thead>
                 <tbody>
                   {previousMatches.map((match, index) => (
-                    <tr key={index} className="border-b border-white/5 last:border-0">
+                    <tr key={index} className="border-t border-white/5">
                       <td className="py-4 px-4 text-white">{match.date}</td>
                       <td className="py-4 px-4 text-rat">{match.event}</td>
                       <td className="py-4 px-4 text-white">{match.round}</td>
