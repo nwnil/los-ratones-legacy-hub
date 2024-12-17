@@ -1,4 +1,4 @@
-import { Twitter, Instagram, Youtube, ShoppingBag, TiktokIcon } from "lucide-react";
+import { Twitter, Instagram, Youtube, ShoppingBag } from "lucide-react";
 
 export const Footer = () => {
   return (
