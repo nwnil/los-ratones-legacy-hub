@@ -21,23 +21,7 @@ export const Hero = () => {
         }} />
       </div>
 
-      {/* Social Media Links */}
-      <motion.div 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
-        className="absolute top-6 right-6 z-20"
-      >
-        <a
-          href="https://x.com/LosRatoneslol"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group flex items-center gap-2 bg-rat-dark/80 hover:bg-rat border border-rat/20 rounded-full px-6 py-3 transition-all duration-300"
-        >
-          <Twitter className="w-5 h-5 text-rat group-hover:text-rat-dark transition-colors" />
-          <span className="text-white group-hover:text-rat-dark font-medium transition-colors">Follow the Team</span>
-        </a>
-      </motion.div>
+      {/* Removed Twitter button as it's now in the footer */}
 
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-6xl mx-auto">
