@@ -1,5 +1,5 @@
-import { Calendar, Trophy } from "lucide-react";
 import { motion } from "framer-motion";
+import { Trophy, Calendar, Users, History } from "lucide-react";
 
 const previousMatches = [
   {
@@ -78,20 +78,20 @@ export const UpcomingMatches = () => {
         >
           <div className="bg-gradient-to-r from-rat-dark/80 to-rat-dark/60 backdrop-blur-lg p-8 rounded-2xl border border-white/5">
             <div className="overflow-x-auto">
-              <table className="w-full border-separate border-spacing-0">
+              <table className="w-full border-collapse">
                 <thead>
                   <tr>
-                    <th className="text-left py-4 px-4 text-white/60 font-medium">Date</th>
-                    <th className="text-left py-4 px-4 text-white/60 font-medium">Event</th>
-                    <th className="text-left py-4 px-4 text-white/60 font-medium">Round</th>
-                    <th className="text-left py-4 px-4 text-white/60 font-medium">Opponent</th>
-                    <th className="text-center py-4 px-4 text-white/60 font-medium">Result</th>
-                    <th className="text-center py-4 px-4 text-white/60 font-medium">Score</th>
+                    <th className="text-left py-4 px-4 text-white/60 font-medium border-b border-white/10">Date</th>
+                    <th className="text-left py-4 px-4 text-white/60 font-medium border-b border-white/10">Event</th>
+                    <th className="text-left py-4 px-4 text-white/60 font-medium border-b border-white/10">Round</th>
+                    <th className="text-left py-4 px-4 text-white/60 font-medium border-b border-white/10">Opponent</th>
+                    <th className="text-center py-4 px-4 text-white/60 font-medium border-b border-white/10">Result</th>
+                    <th className="text-center py-4 px-4 text-white/60 font-medium border-b border-white/10">Score</th>
                   </tr>
                 </thead>
                 <tbody>
                   {previousMatches.map((match, index) => (
-                    <tr key={index} className="border-t border-white/5">
+                    <tr key={index} className="border-b border-white/5 last:border-b-0">
                       <td className="py-4 px-4 text-white">{match.date}</td>
                       <td className="py-4 px-4 text-rat">{match.event}</td>
                       <td className="py-4 px-4 text-white">{match.round}</td>
